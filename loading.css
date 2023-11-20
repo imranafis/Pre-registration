@@ -1,3 +1,43 @@
+:root {
+  --primary: #f77754;
+  --small: #ffbc80;
+  --medium: #ff9f45;
+  --large: #f76e11;
+  --light: #eee;
+  --dark: #313154;
+  --gray: #888;
+  --danger: #f32424;
+  --red: #e00101;
+  --aiubBlue: #034ea1;
+  --aiubBlueBefore: #497faf;
+  --darkestBlue2: #005891;
+  --darkestBlue: #034ea1;
+  --darkBlue: #345cb1;
+  --blue: #2f79ce;
+  --lightBlue: #5393f4;
+  --lighterBlue: #73c2fd;
+  --lightestBlue: #b8e4fa;
+
+  --greenS: rgb(130, 205, 72);
+  --greenM: rgb(85, 180, 54);
+  --greenL: rgb(56, 146, 56);
+  --highLighter: rgb(191, 191, 191);
+
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --small-glow: 0px 0px 4px rgba(255, 188, 128, 0.75);
+  --medium-glow: 0px 0px 4px rgba(255, 159, 69, 0.75);
+  --large-glow: 0px 0px 4px rgb(247, 110, 17, 0.75);
+  --greenS-glow: 0px 0px 4px rgba(130, 205, 72, 0.75);
+  --greenM-glow: 0px 0px 4px rgba(85, 180, 54, 0.75);
+  --greenL-glow: 0px 0px 4px rgba(56, 146, 56, 0.75);
+
+  --aiubBlue-glow: 0px 0px 4px rgba(3, 76, 160, 0.75);
+  --aiubBlueBefore-glow: 0px 0px 4px rgba(73, 127, 175, 0.75);
+  --blue-glow: 0px 0px 4px rgba(46, 122, 209, 0.75);
+  --lighterBlue-glow: 0px 0px 4px rgba(114, 193, 253, 0.75);
+  --darkBlue-glow: 0px 0px 4px rgba(52, 92, 178, 0.75);
+}
+
 .loader {
   display: none;
   position: absolute;
@@ -25,21 +65,21 @@
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #ff5425;
+  border-bottom: 3px solid var(--aiubBlue);
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 3px solid #ff5425;
+  border-right: 3px solid var(--aiubBlue);
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 3px solid #ff5425;
+  border-top: 3px solid var(--aiubBlue);
 }
 
 @keyframes rotate-one {
