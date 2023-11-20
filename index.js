@@ -154,8 +154,13 @@ const getCourses = async () => {
 
   const coursesJSON = JSON.stringify(courses);
   localStorage.setItem("courses", coursesJSON);
-  updateLocalStorage(completedCourses, availableCourses);
   // console.log(courses);
+  const completedCoursesJSON = JSON.stringify(completedCourses);
+  const availableCoursesJSON = JSON.stringify(availableCourses);
+
+  // Set the JSON string in local storage under a specific key
+  localStorage.setItem("completedCourses", completedCoursesJSON);
+  localStorage.setItem("availableCourses", availableCoursesJSON);
 };
 
 function updateLocalStorage(completedCourses, availableCourses) {
