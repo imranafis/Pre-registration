@@ -108,6 +108,7 @@ main {
 .overlay.active {
   display: flex;
 }
+
 .alert {
   display: none;
   flex-direction: column;
@@ -492,7 +493,7 @@ main {
   width: 100%;
   text-align: right;
   color: grey;
-  padding-right: 0.5rem;
+  padding-right: 1.15rem;
   padding-bottom: 0.25rem;
   font-family: "ininity";
 }
