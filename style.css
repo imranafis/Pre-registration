@@ -9,6 +9,7 @@
   --danger: #f32424;
   --red: #e00101;
   --aiubBlue: #034ea1;
+  --aiubBlueBefore: #497faf;
   --darkestBlue2: #005891;
   --darkestBlue: #034ea1;
   --darkBlue: #345cb1;
@@ -31,6 +32,7 @@
   --greenL-glow: 0px 0px 4px rgba(56, 146, 56, 0.75);
 
   --aiubBlue-glow: 0px 0px 4px rgba(3, 76, 160, 0.75);
+  --aiubBlueBefore-glow: 0px 0px 4px rgba(73, 127, 175, 0.75);
   --blue-glow: 0px 0px 4px rgba(46, 122, 209, 0.75);
   --lighterBlue-glow: 0px 0px 4px rgba(114, 193, 253, 0.75);
   --darkBlue-glow: 0px 0px 4px rgba(52, 92, 178, 0.75);
@@ -125,7 +127,7 @@ h4 {
   color: #eee;
   font-weight: 600;
   margin-top: 1rem;
-  background-color: var(--medium);
+  background-color: var(--red);
   box-shadow: var(--shadow);
   padding: 6px 12px;
   border-radius: 10px;
@@ -190,14 +192,25 @@ h4 {
   padding: 1rem;
   padding-left: 1rem;
   color: var(--gray);
-  background-color: #fff;
+  background-color: rgb(232, 240, 254);
   border-radius: 0.5rem;
-  border: none;
+  border: 3px solid rgb(209, 237, 241);
+  transition: border-color 0.3s ease;
   outline: none;
   resize: none;
   margin-top: 2rem;
   margin-left: 1rem;
   /* margin-bottom: 1rem; */
+}
+
+.search input:hover {
+  border-color: var(--aiubBlue); /* New border color on hover */
+}
+
+/* Change border color on focus */
+.search input:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: var(--aiubBlue); /* New border color on focus */
 }
 
 .search #add {
@@ -207,9 +220,9 @@ h4 {
   font-weight: 600;
   padding: 1rem 1.125rem;
   color: #fff;
-  background-color: var(--aiubBlue);
   border-radius: 0.5rem;
-  box-shadow: var(--aiubBlue-glow);
+  background-color: var(--aiubBlueBefore);
+  box-shadow: var(--aiubBlueBefore-glow);
   cursor: pointer;
   transition: 0.2s ease-in-out;
   margin-top: 2rem;
@@ -218,7 +231,8 @@ h4 {
 }
 
 .search #add:hover {
-  opacity: 0.75;
+  background-color: var(--aiubBlue);
+  box-shadow: var(--aiubBlue-glow);
 }
 
 #suggestionList.active {
@@ -460,4 +474,16 @@ h4 {
 .sub .actions .delete {
   font-size: 1.25rem;
   color: var(--darkestBlue);
+}
+
+@font-face {
+  font-family: "ininity";
+  src: url("/ininity.otf") format("OpenType");
+}
+
+.madeBy {
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+  font-family: "ininity";
 }
