@@ -108,7 +108,6 @@ main {
 .overlay.active {
   display: flex;
 }
-
 .alert {
   display: none;
   flex-direction: column;
