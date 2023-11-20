@@ -440,6 +440,14 @@ const deleteCompletedCourse = async (deleteCourseCode) => {
     (obj) => !valuesToRemove.includes(obj.courseDescription)
   );
 
+  completedCourses = completedCourses.filter(
+    (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
+  );
+
+  availableCourses = availableCourses.filter(
+    (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
+  );
+
   createCompletedCourse(completedCourses);
   createAvailableCourse(availableCourses);
   CreditCompleted(completedCourses);
