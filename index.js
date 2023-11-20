@@ -352,6 +352,8 @@ function CreditCompleted(completedCourses) {
 // getData();
 
 function getResults(Course) {
+  creditCompleted = 0;
+  creditTaken = 0;
   // const data = query(collection(db, "courseData"));
   // const querySnapshot = await getDocs(data);
 
@@ -392,9 +394,6 @@ function getResults(Course) {
     (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
   );
 
-  console.log(completedCourses);
-  console.log(availableCourses);
-
   createCompletedCourse(completedCourses);
   createAvailableCourse(availableCourses);
   CreditCompleted(completedCourses);
@@ -403,6 +402,9 @@ function getResults(Course) {
 }
 
 const deleteCompletedCourse = async (deleteCourseCode) => {
+  creditCompleted = 0;
+  creditTaken = 0;
+
   completedCourses = completedCourses.filter(
     (obj) => obj.code !== deleteCourseCode
   );
@@ -431,9 +433,6 @@ const deleteCompletedCourse = async (deleteCourseCode) => {
   availableCourses = availableCourses.filter(
     (obj) => !valuesToRemove.includes(obj.courseDescription)
   );
-
-  console.log(completedCourses);
-  console.log(availableCourses);
 
   createCompletedCourse(completedCourses);
   createAvailableCourse(availableCourses);
