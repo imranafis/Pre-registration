@@ -126,6 +126,7 @@ window.addEventListener("load", (e) => {
 
   if (checkCoursesArray.length === 0) {
     getCourses();
+    updateLocalStorage(completedCourses, availableCourses);
   }
 });
 
