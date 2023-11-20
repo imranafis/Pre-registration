@@ -486,12 +486,13 @@ main {
 
 @font-face {
   font-family: "ininity";
-  src: url("/ininity.otf") format("OpenType");
+  src: url("./ininity.otf") format("OpenType");
 }
 
 .madeBy {
   width: 100%;
   text-align: right;
+  color: var(--dark);
   padding: 1rem;
   font-family: "ininity";
 }
