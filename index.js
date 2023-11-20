@@ -126,7 +126,6 @@ window.addEventListener("load", (e) => {
 
   if (checkCoursesArray.length === 0) {
     getCourses();
-    updateLocalStorage(completedCourses, availableCourses);
   }
 });
 
@@ -155,6 +154,7 @@ const getCourses = async () => {
 
   const coursesJSON = JSON.stringify(courses);
   localStorage.setItem("courses", coursesJSON);
+  updateLocalStorage(completedCourses, availableCourses);
   // console.log(courses);
 };
 
