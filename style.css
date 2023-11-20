@@ -492,7 +492,8 @@ main {
 .madeBy {
   width: 100%;
   text-align: right;
-  color: var(--dark);
-  padding: 1rem;
+  color: grey;
+  padding-right: 0.5rem;
+  padding-bottom: 0.25rem;
   font-family: "ininity";
 }
