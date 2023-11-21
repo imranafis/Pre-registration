@@ -71,14 +71,14 @@ const overlay = document.querySelector(".overlay");
 
 // const inputSection = document.querySelector(".inputSection");
 
-let courseDataJSON = `[{"code":"MAT1102","courseDescription":"DIFFERENTIAL CALCULUS & CO-ORDINATE GEOMETRY","prereq":"Nil","credit":"3"},{"code":"PHY 1101","courseDescription":"PHYSICS 1","prereq":"Nil","credit":"3"},{"code":"PHY 1102","courseDescription":"PHYSICS 1 LAB","prereq":"Nil","credit":"1"},{"code":"ENG1101","courseDescription":"ENGLISH READING SKILLS & PUBLIC SPEAKING","prereq":"Nil","credit":"3"},{"code":"CSC 1101","courseDescription":"INTRODUCTION TO COMPUTERSTUDIES",
+let courseDataJSON = `[{"code":"MAT1102","courseDescription":"DIFFERENTIAL CALCULUS & CO-ORDINATE GEOMETRY","prereq":"Nil","credit":"3"},{"code":"PHY 1101","courseDescription":"PHYSICS 1","prereq":"Nil","credit":"3"},{"code":"PHY 1102","courseDescription":"PHYSICS 1 LAB","prereq":"Nil","credit":"1"},{"code":"ENG1101","courseDescription":"ENGLISH READING SKILLS & PUBLIC SPEAKING","prereq":"Nil","credit":"3"},{"code":"CSC 1101","courseDescription":"INTRODUCTION TO COMPUTER STUDIES",
 "prereq":"Nil","credit":"1"},{"code":"CSC 1103","courseDescription":"INTRODUCTION TO PROGRAMMING LAB","prereq":"Nil","credit":"1"},{"code":"CSC 1102","courseDescription":"INTRODUCTION TO PROGRAMMING","prereq":"Nil","credit":"3"},{"code":"CSC1204","courseDescription":"DISCRETE MATHEMATICS","prereq":"MAT1102 & CSC1102","credit":"3"},{"code":"MAT1205","courseDescription":"INTEGRAL CALCULUS & ORDINARY DIFFERENTIAL EQUATIONS",
 "prereq":"MAT1102","credit":"3"},{"code":"CSC1205","courseDescription":"OBJECT ORIENTED PROGRAMMING 1","prereq":"CSC1102 & CSC1103","credit":"3/LAB"},{"code":"PHY1203","courseDescription":"PHYSICS 2","prereq":"PHY1101","credit":"3"},{"code":"PHY1204","courseDescription":"PHYSICS 2 LAB",
  "prereq":"PHY1102","credit":"1"},{"code":"ENG1202","courseDescription":"ENGLISH WRITING SKILLS & COMMUNICATIONS","prereq":"ENG1101","credit":"3"},{"code":"COE2101","courseDescription":"INTRODUCTION TO ELECTRICAL CIRCUITS","prereq":"PHY1101","credit":"3"},{"code":"COE2102","courseDescription":"INTRODUCTION TO ELECTRICAL CIRCUITS LAB","prereq":"PHY1102","credit":"1"},{"code":"CHEM1101","courseDescription":"CHEMISTRY",
  "prereq":"PHY1203","credit":"3"},{"code":"MAT2101","courseDescription":"COMPLEX VARIABLE,LAPLACE & Z-TRANSFORMATION","prereq":"MAT1205","credit":"3"},{"code":"CSC2108","courseDescription":"INTRODUCTION TO DATABASE","prereq":"CSC1205","credit":"3/LAB"},{"code":"EEE2104","courseDescription":"ELECTRONIC DEVICES LAB","prereq":"COE2102","credit":"1"},{"code":"BBA1102","courseDescription":"PRINCIPLES OF ACCOUNTING",
  "prereq":"MAT1205","credit":"3"},{"code":"EEE2103","courseDescription":"ELECTRONIC DEVICES","prereq":"COE2101","credit":"3"},{"code":"CSC2106","courseDescription":"DATA STRUCTURE","prereq":"CSC1204 & CSC1205","credit":"3"},{"code":"CSC2107","courseDescription":"DATA STRUCTURE LAB",
  "prereq":"CSC1204 & CSC1205","credit":"1"},{"code":"BAE2101","courseDescription":"COMPUTER AIDED DESIGN & DRAFTING","prereq":"Nil","credit":"1"},{"code":"CSC2211","courseDescription":"ALGORITHMS","prereq":"CSC2106","credit":"3/LAB"},{"code":"MAT2202","courseDescription":"MATRICES, VECTORS, FOURIER ANALYSIS",
- "prereq":"MAT2101","credit":"3"},{"code":"CSC2210","courseDescription":"OBJECT ORIENTED PROGRAMMING 2","prereq":"CSC2106 CSC2108","credit":"3/LAB"},{"code":"CSC2209","courseDescription":"OBJECT ORIENTED ANALYSIS AND DESIGN","prereq":"CSC2108","credit":"3"},{"code":"BAS2101","courseDescription":"BANGLADESH STUDIES",
+ "prereq":"MAT2101","credit":"3"},{"code":"CSC2210","courseDescription":"OBJECT ORIENTED PROGRAMMING 2","prereq":"CSC2106 & CSC2108","credit":"3/LAB"},{"code":"CSC2209","courseDescription":"OBJECT ORIENTED ANALYSIS AND DESIGN","prereq":"CSC2108","credit":"3"},{"code":"BAS2101","courseDescription":"BANGLADESH STUDIES",
  "prereq":"CSC1101","credit":"3"},{"code":"EEE3101","courseDescription":"DIGITAL LOGIC AND CIRCUITS","prereq":"EEE2103","credit":"3"},{"code":"EEE3102","courseDescription":"DIGITAL LOGIC AND CIRCUITS LAB","prereq":"EEE2104","credit":"1"},{"code":"MAT3103","courseDescription":"COMPUTATIONAL STATISTICS AND PROBABILITY",
  "prereq":"MAT2101","credit":"3"},{"code":"CSC3113","courseDescription":"THEORY OF COMPUTATION","prereq":"CSC2211","credit":"3"},{"code":"ECO3150","courseDescription":"PRINCIPLES OF ECONOMICS","prereq":"MAT3103","credit":"2"},{"code":"ENG2103","courseDescription":"BUSINESS COMMUNICATION",
  "prereq":"BAS2101","credit":"3"},{"code":"MAT3101","courseDescription":"NUMERICAL METHODS FOR SCIENCE AND ENGINEERING","prereq":"MAT2202","credit":"3"},{"code":"COE3103","courseDescription":"DATA COMMUNICATION","prereq":"EEE3101 & EEE3102","credit":"3/LAB"},{"code":"COE3104","courseDescription":"MICROPROCESSOR AND EMBEDDED SYSTEMS",
@@ -87,7 +87,7 @@ let courseDataJSON = `[{"code":"MAT1102","courseDescription":"DIFFERENTIAL CALCU
  "prereq":"CSC3112","credit":"3/LAB"},{"code":"EEE2216","courseDescription":"ENGINEERING ETHICS","prereq":"CSC3112 & COE3104","credit":"2"},{"code":"CSC3216","courseDescription":"COMPILER DESIGN","prereq":"CSC3113","credit":"3/LAB"},{"code":"CSC4118","courseDescription":"COMPUTER GRAPHICS",
  "prereq":"CSC2211 & MAT2202","credit":"3/LAB"},{"code":"MGT3202","courseDescription":"ENGINEERING MANAGEMENT","prereq":"EEE2216","credit":"3"},{"code":"CSC4197","courseDescription":"RESEARCH METHODOLOGY","prereq":"100","credit":"3"},{"code":"CSC4299","courseDescription":"THESIS",
  "prereq":"CSC4197","credit":"3"},{"code":"CSC4296","courseDescription":"INTERNSHIP","prereq":"139","credit":"3"},{"code":"CSC4181","courseDescription":"ADVANCE DATABASE MANAGEMENT SYSTEM",
- "prereq":"CSC2108","credit":"3/LAB"},{"code":"MIS3101","courseDescription":"MANAGEMENT INFORMATION SYSTEM","prereq":"CSC3112","credit":"3"},{"code":"MIS4011","courseDescription":"ENTERPRISE RESOURCE PLANNING","prereq":"MIS3101 & CSC3112","credit":"3"},{"code":"CSC4285","courseDescription":"DATA WAREHOUSE AND DATA MINING",
+ "prereq":"CSC2108 & Major","credit":"3/LAB"},{"code":"MIS3101","courseDescription":"MANAGEMENT INFORMATION SYSTEM","prereq":"CSC3112","credit":"3"},{"code":"MIS4011","courseDescription":"ENTERPRISE RESOURCE PLANNING","prereq":"MIS3101 & CSC3112","credit":"3"},{"code":"CSC4285","courseDescription":"DATA WAREHOUSE AND DATA MINING",
  "prereq":"CSC2211 & MAT3103","credit":"3"},{"code":"CSC4182","courseDescription":"HUMAN COMPUTER INTERACTION","prereq":"CSC3217 & CSC3215","credit":"3"},{"code":"MIS4014","courseDescription":"BUSINESS INTELLIGENCE AND DECISION SUPPORT SYSTEMS","prereq":"Major","credit":"3"},{"code":"CSC4180","courseDescription":"INTRODUCTION TO DATA SCIENCE",
  "prereq":"Choice","credit":"3"},{"code":"CSC4183","courseDescription":"CYBER LAWS & INFORMATION SECURITY","prereq":"Major","credit":"3"},{"code":"MIS4007","courseDescription":"DIGITAL MARKETING","prereq":"Major","credit":"3"},{"code":"MIS4012","courseDescription":"E-COMMERCE, E-GOVERNANCE & E-SERIES","prereq":"Major","credit":"3"},{"code":"CSC4270","courseDescription":"SOFTWARE DEVELOPMENT PROJECT MANAGEMENT",
  "prereq":"CSC3112","credit":"3"},{"code":"CSC4160","courseDescription":"SOFTWARE REQUIREMENT ENGINEERING","prereq":"CSC3112","credit":"3"},{"code":"CSC4271","courseDescription":"SOFTWARE QUALITY AND TESTING","prereq":"CSC3112","credit":"3"},{"code":"CSC4162","courseDescription":"PROGRAMMING IN PYTHON","prereq":"CSC3215","credit":"3/LAB"},{"code":"CSC4274","courseDescription":"VIRTUAL REALITY SYSTEMS DESIGN",
@@ -173,7 +173,6 @@ function updateLocalStorage(completedCourses, availableCourses) {
   localStorage.setItem("completedCourses", completedCoursesJSON);
   localStorage.setItem("availableCourses", availableCoursesJSON);
 }
-
 function getDataFromLocalStorage() {
   const coursesJSON = localStorage.getItem("courses");
   const completedCoursesJSON = localStorage.getItem("completedCourses");
@@ -236,7 +235,7 @@ function checkValid(userInput) {
 function showSuggestions(userInput) {
   suggestionList.innerHTML = "";
 
-  const matchingWords = courses.filter((word) => word.startsWith(userInput));
+  const matchingWords = courses.filter((word) => word.includes(userInput));
 
   // const matchingWords = courses.filter((course) =>
   //   course.courseDescription.startsWith(userInput)
@@ -367,19 +366,22 @@ function getResults(Course) {
     if (item.courseDescription == Course) {
       completedCourses.push(item);
 
-      CreditCompleted(completedCourses);
-
       const Code = item.code.replace(/\s+/g, "");
-      // console.log(Code);
       courseData.forEach((item) => {
         const Prereq = item.prereq.replace(/\s+/g, "");
-        // console.log(creditCompleted.toString());
-        if (
+        if (Prereq.includes("&") && Prereq.includes(Code)) {
+          const tempPrereq = Prereq.replace("&", "").replace(Code, "");
+          completedCourses.forEach((tempItem) => {
+            const tempCode = tempItem.code.replace(/\s+/g, "");
+            if (tempPrereq.includes(tempCode)) {
+              availableCourses.push(item);
+            }
+          });
+        } else if (
           Prereq.includes(Code) ||
           Prereq == "Nil" ||
           Prereq == creditCompleted.toString()
         ) {
-          // console.log(item.data().courseDescription);
           availableCourses.push(item);
         }
       });
@@ -389,15 +391,13 @@ function getResults(Course) {
   let valuesToRemove = completedCourses.map((obj) => obj.courseDescription);
 
   availableCourses = availableCourses.filter(
-    (obj) => !valuesToRemove.includes(obj.courseDescription)
+    (obj, index, self) =>
+      !valuesToRemove.includes(obj.courseDescription) &&
+      index === self.findIndex((obj2) => obj2.code === obj.code)
   );
-
   completedCourses = completedCourses.filter(
-    (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
-  );
-
-  availableCourses = availableCourses.filter(
-    (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
+    (obj, index, self) =>
+      index === self.findIndex((obj2) => obj2.code === obj.code)
   );
 
   createCompletedCourse(completedCourses);
@@ -414,9 +414,7 @@ const deleteCompletedCourse = async (deleteCourseCode) => {
   completedCourses = completedCourses.filter(
     (obj) => obj.code !== deleteCourseCode
   );
-  // availableCourses = availableCourses.filter(
-  //   (obj) => obj.prereq !== deleteCourseCode
-  // );
+
   availableCourses = [];
 
   // const data = query(collection(db, "courseData"));
@@ -427,8 +425,19 @@ const deleteCompletedCourse = async (deleteCourseCode) => {
       const Code = Course.code.replace(/\s+/g, "");
       const Prereq = item.prereq.replace(/\s+/g, "");
 
-      if (Prereq.includes(Code) || Prereq == "Nil") {
-        // console.log(item.data().courseDescription);
+      if (Prereq.includes("&") && Prereq.includes(Code)) {
+        const tempPrereq = Prereq.replace("&", "").replace(Code, "");
+        completedCourses.forEach((tempItem) => {
+          const tempCode = tempItem.code.replace(/\s+/g, "");
+          if (tempPrereq.includes(tempCode)) {
+            availableCourses.push(item);
+          }
+        });
+      } else if (
+        Prereq.includes(Code) ||
+        Prereq == "Nil" ||
+        Prereq == creditCompleted.toString()
+      ) {
         availableCourses.push(item);
       }
     });
@@ -437,15 +446,13 @@ const deleteCompletedCourse = async (deleteCourseCode) => {
   let valuesToRemove = completedCourses.map((obj) => obj.courseDescription);
 
   availableCourses = availableCourses.filter(
-    (obj) => !valuesToRemove.includes(obj.courseDescription)
+    (obj, index, self) =>
+      !valuesToRemove.includes(obj.courseDescription) &&
+      index === self.findIndex((obj2) => obj2.code === obj.code)
   );
-
   completedCourses = completedCourses.filter(
-    (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
-  );
-
-  availableCourses = availableCourses.filter(
-    (obj, index, self) => index === self.findIndex((o) => o.code === obj.code)
+    (obj, index, self) =>
+      index === self.findIndex((obj2) => obj2.code === obj.code)
   );
 
   createCompletedCourse(completedCourses);
